@@ -1,37 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 body {
-    font: 12px sans-serif;
-    text-align: center;
-    margin: 20px;
+    padding: 24px;
+    font-family: 'Inter', sans-serif;
 }
-button {
-    border-radius: 5px;
-    background: white;
-    color: black;
-    border: none;
-    padding: 8px 15px;
-    margin: 0 5px;
-    box-shadow: inset 0 0 0 1px black;
-    outline: none;
+
+.color-tiles-container {
+    display: flex;
+    padding: 10px 0;
+    gap: 10px;
+    flex-direction: column;
+    list-style-type: none;
 }
-#create {
-    box-shadow: none;
-    background: #18a0fb;
-    color: white;
+
+.color-tile-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px 0;
+    border: 1px solid #d1d4d4;
+    border-radius: 4px;
+    background-color: #fff;
 }
-input {
-    border: none;
-    outline: none;
-    padding: 8px;
+
+.color-tile-header {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
 }
-input:hover {
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+
+.color-tile-header h4 {
+    font-weight: 500;
+    margin: 0;
 }
-button:focus {
-    box-shadow: inset 0 0 0 2px #18a0fb;
+
+.color-tile-meta-list {
+    list-style-type: none;
+    display: flex;
+    font-size: 12px;
 }
-#create:focus {
-    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.3);
+
+.color-tile-meta-list-item {
+    display: flex;
+    align-items: center;
+    color: #6e7676;
 }
-input:focus {
-    box-shadow: inset 0 0 0 2px #18a0fb;
+
+.color-tile-meta-list-item:not(:last-child):after {
+    content: '/';
+    user-select: none;
+    margin: 0 7px;
+    color: rgba(0 0 0 / 20%);
+}
+
+.color-tile-meta-color {
+    gap: 4px;
+    text-transform: uppercase;
+}
+
+.color-tile-header,
+.color-tile-meta-list {
+    padding: 0 16px 0 16px;
+}
+
+.color-tile-color-sample {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    box-shadow: inset 0 0 0 1px rgba(0 0 0 / 10%);
+}
+
+.suggested-color-styles-container {
+    display: none;
 }
